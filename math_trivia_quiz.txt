@@ -1,5 +1,3 @@
-# Math Trivia Quiz
-
 {
 'Q1. Which ancient Greek mathematician is often called the "Father of Geometry" for compiling the foundational textbook Elements? \n A) Archimedes \n B) Euclid \n C) Pythagoras \n D) Thales',
 
