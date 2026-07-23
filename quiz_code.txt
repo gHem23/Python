@@ -1,8 +1,21 @@
 ## Week 1 Quiz Game
 
 
-n=len(ans)
+# Opens quiz qusstions and answers in gitHub
+with open("Python/math_trivia_quiz.txt", "r", encoding="utf-8") as file:
+    content = file.read().splitlines()
+    #print(content)
 
+with open("Python/quiz_answers", "r", encoding="utf-8") as file:
+    ans = file.read().splitlines()
+    #print(ans)
+
+
+
+
+n=len(ans) # Number of questions
+
+# Separates questions from answer choices for display purposes
 ques = []
 for i in range(0,n):
   ques.append(content[2*i])
@@ -14,11 +27,14 @@ choices = [item for item in content if item not in to_remove]
 
 
 
-score=0
+
 
 # Run Quiz
 name = input("What is your first and last name?")
+
+score=0
 response = []
+
 for i in range(0,n):
     Q=input(ques[i]+ "\n" +"     "+choices[i] + "\n Select a letter choice. ").strip().lower()
     if Q == str(ans[i]).lower() or Q == str(ans[i]).lower()+")":
@@ -29,6 +45,8 @@ for i in range(0,n):
       print("Incorrect.")
       print("Score ", score, " out of ", n, "\n")
     response.append(Q)
+
+
 
 
 # Set up repsonse
