@@ -1,0 +1,42 @@
+## Week 1 Quiz Game
+
+
+n=len(ans)
+
+ques = []
+for i in range(0,n):
+  ques.append(content[2*i])
+#print(ques)
+
+to_remove = set(ques)
+choices = [item for item in content if item not in to_remove]
+#print(choices)
+
+
+
+score=0
+
+# Run Quiz
+name = input("What is your first and last name?")
+response = []
+for i in range(0,n):
+    Q=input(ques[i]+ "\n" +"     "+choices[i] + "\n Select a letter choice. ").strip().lower()
+    if Q == str(ans[i]).lower() or Q == str(ans[i]).lower()+")":
+      print("Correct.")
+      score = score + 1
+      print("Score ", score, " out of ", n, "\n")
+    else:
+      print("Incorrect.")
+      print("Score ", score, " out of ", n, "\n")
+    response.append(Q)
+
+
+# Set up repsonse
+score = str(score)
+N = str(n)
+Score = score+" out of "+  N
+fb = name+", your final score is "+ Score
+
+# Display the final results
+print("\n\n --- Quiz Over! ---")
+print(fb)
