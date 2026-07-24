@@ -37,13 +37,13 @@ response = []
 
 for i in range(0,n):
     Q=input(ques[i]+ "\n" +"     "+choices[i] + "\n Select a letter choice. ").strip().lower()
-    if Q == str(ans[i]).lower() or Q == str(ans[i]).lower()+")":
-      print("Correct.")
+    if Q == str(ans[i]).lower() or Q == str(ans[i]).upper()+")":
+      #print("Correct.")
       score = score + 1
-      print("Score ", score, " out of ", n, "\n")
-    else:
-      print("Incorrect.")
-      print("Score ", score, " out of ", n, "\n")
+      #print("Score ", score, " out of ", n, "\n")
+    #else:
+      #print("Incorrect.")
+      #print("Score ", score, " out of ", n, "\n")
     response.append(Q)
 
 
@@ -54,6 +54,12 @@ score = str(score)
 N = str(n)
 Score = score+" out of "+  N
 fb = name+", your final score is "+ Score
+
+# Record reponse
+response = fb+". "+str(response)
+with open("Python/responses.txt", "a", encoding="utf-8") as file:
+    ans = file.writelines(response+'\n')
+    
 
 # Display the final results
 print("\n\n --- Quiz Over! ---")
