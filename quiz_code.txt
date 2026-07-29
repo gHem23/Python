@@ -2,11 +2,11 @@
 
 
 # Opens quiz qusstions and answers in gitHub
-with open("Python/math_trivia_quiz.txt", "r", encoding="utf-8") as file:
+with open("/content/Python/math_trivia_quiz.txt", "r", encoding="utf-8") as file:
     content = file.read().splitlines()
     #print(content)
 
-with open("Python/quiz_answers", "r", encoding="utf-8") as file:
+with open("/content/Python/quiz_answers", "r", encoding="utf-8") as file:
     ans = file.read().splitlines()
     #print(ans)
 
