@@ -33,7 +33,6 @@ choices = [item for item in content if item not in to_remove]
 name = input("What is your first and last name?")
 
 score=0
-response = []
 
 for i in range(0,n):
     Q=input(ques[i]+ "\n" +"     "+choices[i] + "\n Select a letter choice. ").strip().lower()
@@ -44,7 +43,6 @@ for i in range(0,n):
     #else:
       #print("Incorrect.")
       #print("Score ", score, " out of ", n, "\n")
-    response.append(Q)
 
 
 
@@ -55,10 +53,6 @@ N = str(n)
 Score = score+" out of "+  N
 fb = name+", your final score is "+ Score
 
-# Record reponse
-response = fb+". "+str(response)
-with open("Python/responses.txt", "a", encoding="utf-8") as file:
-    ans = file.writelines(response+'\n')
     
 
 # Display the final results
