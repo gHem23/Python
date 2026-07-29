@@ -50,7 +50,7 @@ for i in range(0,n):
 # Set up repsonse
 score = str(score)
 N = str(n)
-Score = score+" out of "+  N
+Score = score+" out of "+  N+”.\n”
 fb = name+", your final score is "+ Score
 
     
@@ -61,5 +61,5 @@ print(fb)
 
 # Add result to responses.txt
 with open("/content/Python/responses.txt", "a", encoding="utf-8") as file:
-    content = file.write(fb+”\n”)
+    content = file.write(f)
     #print(content)
