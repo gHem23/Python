@@ -50,7 +50,7 @@ for i in range(0,n):
 # Set up repsonse
 score = str(score)
 N = str(n)
-Score = score+" out of "+  N+”.\n”
+Score = score+" out of "+  N+".\n "
 fb = name+", your final score is "+ Score
 
     
